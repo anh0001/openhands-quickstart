@@ -26,16 +26,25 @@ OpenHands runs code inside a Docker container. By default, the container user ma
 
 ## Running OpenHands
 
-After setup, start OpenHands:
+> **Recommendation:** Use the **CLI (terminal UI)** — it is more mature than the web UI and handles configuration (including model settings) more reliably.
+
+The recommended way to run OpenHands is to `cd` into your project folder first, then launch:
 
 ```bash
+cd /path/to/your/project
 openhands
 ```
 
-Or specify a workspace directory:
+Running from inside the project directory makes that folder your workspace automatically. Alternatively, you can pass the path explicitly:
 
 ```bash
 WORKSPACE_DIR=/path/to/your/project openhands
+```
+
+To start the web UI instead:
+
+```bash
+openhands serve --mount-cwd
 ```
 
 ## Using Ollama (Local Models)
